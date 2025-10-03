@@ -1,0 +1,44 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compilar C (CP1252)",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-Wall",
+                "-fexec-charset=CP1252",
+                "-o",
+                "${fileDirname}\\${input:exeName}.exe",
+                "${file}"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Executar programa",
+            "type": "shell",
+            "command": "${fileDirname}\\${input:exeName}.exe",
+            "problemMatcher": []
+        },
+        {
+            "label": "Compilar e Executar",
+            "dependsOn": [
+                "Compilar C (CP1252)",
+                "Executar programa"
+            ],
+            "dependsOrder": "sequence",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "inputs": [
+        {
+            "id": "exeName",
+            "type": "promptString",
+            "description": "Digite o nome do executável:",
+            "default": "programa"
+        }
+    ]
+}
