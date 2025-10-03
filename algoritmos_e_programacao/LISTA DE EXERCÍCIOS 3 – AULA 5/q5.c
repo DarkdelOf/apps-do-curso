@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 int main(){
-  	setlocale(LC_ALL, "Portuguese");
+  	setlocale(LC_ALL,"Portuguese");
   	system("chcp 65001 > nul");
   
 	float idade;
