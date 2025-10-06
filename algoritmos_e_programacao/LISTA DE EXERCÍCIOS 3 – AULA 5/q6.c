@@ -30,4 +30,8 @@ int main(){
     
     printf("\nA maior nota foi: %.1f\nAs demais foram %.1f e %.1f\nA média final é de: %.1f\n",n1,n2,n3,mfinal);
     printf("Seu código é: %s", code);
+    if (mfinal >= 5)
+    printf("Você foi APROVADO !");
+    else
+    printf("Você foi REPROVADO !");
 }
