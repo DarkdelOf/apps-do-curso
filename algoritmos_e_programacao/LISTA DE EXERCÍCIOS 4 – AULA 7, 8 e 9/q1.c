@@ -9,5 +9,11 @@ int main(void){
 	float valor;
 	
 	do{ scanf("%f.0", &valor);
+		if (valor > 0){
+			printf("POSITIVO");
+		}
+		if (valor < 0){
+			printf("NEGATIVO");
+		}
 	}while(valor != 0);
 }
