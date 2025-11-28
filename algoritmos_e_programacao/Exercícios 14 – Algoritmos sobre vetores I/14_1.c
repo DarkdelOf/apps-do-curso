@@ -4,11 +4,11 @@ após seu total preenchimento.*/
 #include <stdio.h>
 
 int main(void){
-    int vetor[10], i;
+    int X[10], i;
     for(i=0;i<10;i++){
-        vetor[i] = 30;
+        X[i] = 30;
     }
         for(i=0;i<10;i++){
-        printf("Índice %d: %d\n", i,vetor[0]);
+        printf("Índice %d: %d\n", i,X[0]);
     }
 }
