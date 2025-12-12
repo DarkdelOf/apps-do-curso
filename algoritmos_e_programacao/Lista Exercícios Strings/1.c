@@ -12,8 +12,12 @@ int main(void){
     char nometemp[100];
     char nome[100] = "Bom dia";
     for(c=0;nome[c]!='\0';c++);
+    nometemp[c] = '\0';
     for(i=0;i<c;i++){
         nometemp[(c-1)-i] = nome[i];
     }
-    printf("%s", nometemp);
+    for(i=0;i<c;i++){
+        nome[i] = nometemp[i];
+    }
+    printf("%s", nome);
 }
